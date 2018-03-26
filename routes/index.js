@@ -8,15 +8,19 @@ router.get('/', function(req, res, next) {
 });
 router.post('/Send_Message',function(req,res){
   console.log(req.body);
+  switch(req.body.result.parameters.echoText) {
+    case "Bonjour":
+        speech="sbe7 elfol";
+        break;
+    case "Ali":
+        speech="yzzi blé bléda";
+        break;
+    default:
+        speech="i7chim";
+}
 
-  var speech =
-    req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.echoText
-      ? req.body.result.parameters.echoText
-      : "Seems like some problem. Speak again.";
   return res.json({
-    speech: "tfadlik yékhi",
+    speech: speech,
     displayText: speech,
     source: "webhook-echo-sample"
   });
