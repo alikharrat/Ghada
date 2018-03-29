@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const dialogflow = require('dialogflow');
 /* GET home page. */
-createEntityTypes("chatapp-6520a");
+createEntityTypes("heroic-artifact-160907");
 router.get('/', function(req, res, next) {
   console.log(req.body)
   res.render('index', { title: 'Express' });
