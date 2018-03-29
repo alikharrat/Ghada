@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 /* GET home page. */
-createEntityTypes("heroic-artifact-160907");
 router.get('/', function(req, res, next) {
   console.log(req.body)
   res.render('index', { title: 'Express' });
