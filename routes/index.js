@@ -45,7 +45,7 @@ function createEntityTypes(projectId) {
   const sizeRequest = {
     parent: agentPath,
     entityType: {
-      displayName: 'size2',
+      displayName: 'size333',
       kind: 'KIND_MAP',
       autoExpansionMode: 'AUTO_EXPANSION_MODE_UNSPECIFIED',
       entities: [
